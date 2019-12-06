@@ -1,1 +1,24 @@
-/* index.css */
+/* Variables */
+:root {
+	--primary-main: #030C60;
+	--primary-tint-1: #919DD1;
+	--primary-tint-2: #D8DDEF;
+	--secondary: #EAEAEA;
+	--font-primary: 'Titan One';
+	--font-secondary: 'Raleway';
+}
+
+/* Common */
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+}
+header,
+main,
+footer {
+	width: 100%;
+}
