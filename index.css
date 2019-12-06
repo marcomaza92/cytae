@@ -1,11 +1,17 @@
 /* Variables */
 :root {
+	/* Colors */
 	--primary-main: #030C60;
 	--primary-tint-1: #919DD1;
 	--primary-tint-2: #D8DDEF;
 	--secondary: #EAEAEA;
+
+	/* Fonts */
 	--font-primary: 'Titan One';
 	--font-secondary: 'Raleway';
+
+	/* Shadows */
+	--shadow-main: 0px 3px 6px var(--primary-main);
 }
 
 /* Common */
