@@ -11,7 +11,9 @@
 	--font-secondary: 'Raleway';
 
 	/* Shadows */
-	--shadow-main: 0px 3px 6px var(--primary-main);
+	--shadow-primary: 0px 3px 6px var(--primary-main);
+	--shadow-secondary: 0px 3px 6px var(--secondary);
+	--shadow-tertiary: 0px 3px 6px var(--primary-tint-1);
 }
 
 /* Common */
@@ -48,6 +50,7 @@ header {
 	color: var(--secondary);
 	width: auto;
 	height: 100%;
+	text-shadow: var(--shadow-primary);
 }
 .logo a {
 	display: block;
@@ -75,7 +78,7 @@ nav {
 .menu {
 	position: absolute;
 	display: none;
-	background: var(--primary-tint-1);
+	background: var(--primary-main);
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -92,12 +95,13 @@ nav {
 }
 .menu-item a {
 	text-decoration: none;
-	color: var(--primary-main);
+	color: var(--secondary);
+	text-shadow: var(--shadow-tertiary);
 	transition: color 0.25s ease-in-out;
 	font-size: 1.25em;
 }
 .menu-item a:hover {
-	color: var(--secondary);
+	color: var(--primary-tint-1);
 }
 .open {
 	display: flex !important;
@@ -119,16 +123,18 @@ nav {
 }
 .icon-open-menu:hover,
 .icon-close-menu:hover {
-	color: var(--secondary);
+	color: var(--primary-tint-1);
 }
 .icon-open-menu {
 	display: flex;
 	justify-content: end;
-	color: var(--primary-tint-2);
+	color: var(--secondary);
+	text-shadow: var(--shadow-primary);
 }
 .icon-close-menu {
 	padding-right: 15px;
 	position: absolute;
 	top: 0;
-	color: var(--primary-main);
+	color: var(--secondary);
+	text-shadow: var(--shadow-tertiary);
 }
