@@ -27,6 +27,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
+	height: 3000px;
 }
 header,
 main,
@@ -139,11 +140,76 @@ nav {
 	text-shadow: var(--shadow-primary);
 }
 .icon-close-menu {
-	padding-right: 15px;
+	padding-right: 1em;
 	position: absolute;
 	top: 0;
 	color: var(--secondary);
 	text-shadow: var(--shadow-tertiary);
+}
+/* Home */
+.home,
+.about,
+.motivation,
+.people,
+.join {
+	position: relative;
+	height: 100%;
+	padding: 0;
+}
+.home {
+	background-color: var(--secondary);
+	background-image: url('media/main-bg-edited-curved.svg'), url('media/main-bg-shape.svg');
+	background-position: left top, left top;
+	background-repeat: no-repeat, no-repeat;
+	background-size: cover, cover;
+	color: var(--secondary);
+}
+.home-content {
+	padding-top: 65px;
+	padding-bottom: 4em;
+}
+.home-content * {
+	margin: 0;
+	width: 100%;
+	text-align: center;
+}
+.home-content h1 {
+	margin: 1.25em 0 2.5em 0;
+	font-size: 2em;
+	font-family: var(--font-primary);
+	font-weight: 400;
+	text-shadow: var(--shadow-primary);
+	text-transform: uppercase;
+}
+.home-content h2 {
+	margin-bottom: 1.25em;
+	font-size: 1.5em;
+	font-family: var(--font-secondary);
+	text-shadow: var(--shadow-primary);
+}
+.home-content p {
+	margin-bottom: 0.75em;
+	font-family: var(--font-secondary);
+	text-shadow: var(--shadow-primary);
+}
+.home-content a {
+	display: block;
+	width: 70%;
+	height: 48px;
+	margin: 0 auto;
+	margin-top: 2em;
+	text-decoration: none;
+	font-family: var(--font-secondary);
+	color: var(--secondary);
+	background: var(--primary-main);
+	transition: background 0.25s ease-in-out;
+	font-weight: 600;
+	line-height: 48px;
+	font-size: 1.5em;
+	border-radius: 50px;
+}
+.home-content a:hover {
+	background: var(--secondary);
 }
 @media (min-width: 1200px) {
 	body {
@@ -179,7 +245,7 @@ nav {
 		left: 0;
 		bottom: 0;
 		color: var(--secondary);
-		padding: 0 15px;
+		padding: 0 1em;
 		font-size: 1.25em;
 	}
 	.menu-item a:hover {
