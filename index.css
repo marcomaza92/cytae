@@ -221,17 +221,13 @@ nav {
 	}
 }
 @media (min-width: 1200px) {
-	body {
+	header {
 		padding: 0 var(--padding-main);
 		padding-top: calc(var(--padding-main) / 4);
-	}
-	header,
-	main,
-	footer {
-		width: calc(100% - (var(--padding-main) * 2));
+		width: 100%;
 	}
 	nav {
-		width: 70%;
+		width: 60%;
 	}
 	.icon-open-menu,
 	.icon-close-menu {
