@@ -73,7 +73,7 @@ header {
 	height: 100vh;
 }
 nav {
-	width: calc(70% - 10px);
+	width: auto;
 }
 .menu {
 	position: absolute;
@@ -94,10 +94,14 @@ nav {
 	text-align: center;
 }
 .menu-item a {
+	display: inline-block;
 	text-decoration: none;
 	color: var(--secondary);
 	text-shadow: var(--shadow-tertiary);
 	transition: color 0.25s ease-in-out;
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
 	font-size: 1.25em;
 }
 .menu-item a:hover {
