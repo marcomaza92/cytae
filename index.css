@@ -157,16 +157,16 @@ nav {
 	padding: 0;
 }
 .home {
-	background-color: var(--secondary);
 	background-image: url('media/main-bg-edited-curved.svg'), url('media/main-bg-shape.svg');
-	background-position: left top, left top;
+	background-position: left -20px, left top;
 	background-repeat: no-repeat, no-repeat;
 	background-size: cover, cover;
 	color: var(--secondary);
 }
 .home-content {
+	min-height: 800px;
+	height: 100%;
 	padding-top: 65px;
-	padding-bottom: 4em;
 }
 .home-content * {
 	margin: 0;
@@ -202,16 +202,20 @@ nav {
 	font-family: var(--font-secondary);
 	color: var(--secondary);
 	background: var(--primary-main);
-	transition: background 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
 	font-weight: 600;
 	line-height: 48px;
 	font-size: 1.5em;
 	border-radius: 50px;
 }
 .home-content a:hover {
+	color: var(--primary-main);
 	background: var(--secondary);
 }
 @media (min-width: 768px) {
+	.home {
+		background-position: left -30px, left top;
+	}
 	.home-content h1 {
 		padding-left: 2em;
 		padding-right: 2em;
@@ -227,7 +231,7 @@ nav {
 		width: 100%;
 	}
 	nav {
-		width: 60%;
+		width: 70%;
 	}
 	.icon-open-menu,
 	.icon-close-menu {
@@ -268,5 +272,23 @@ nav {
 		width: 64px;
 		margin: 0 auto;
 		background: var(--secondary);
+	}
+	.home {
+		background-position: left -40px, left top;
+	}
+	.home-content h1 {
+		font-size: 3em;
+		margin: 1.25em 0;
+		padding-left: 4em;
+		padding-right: 4em;
+	}
+	.home-content h2 {
+		font-size: 2em;
+	}
+	.home-content p {
+		font-size: 1.25em;
+	}
+	.home-content a {
+		width: 20%;
 	}
 }
