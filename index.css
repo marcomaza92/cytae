@@ -211,6 +211,15 @@ nav {
 .home-content a:hover {
 	background: var(--secondary);
 }
+@media (min-width: 768px) {
+	.home-content h1 {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+	.home-content a {
+		width: 40%;
+	}
+}
 @media (min-width: 1200px) {
 	body {
 		padding: 0 var(--padding-main);
