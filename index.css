@@ -14,6 +14,9 @@
 	--shadow-primary: 0px 3px 6px var(--primary-main);
 	--shadow-secondary: 0px 3px 6px var(--secondary);
 	--shadow-tertiary: 0px 3px 6px var(--primary-tint-1);
+
+	/* Spacing */
+	--padding-main: 7em;
 }
 
 /* Common */
@@ -141,4 +144,58 @@ nav {
 	top: 0;
 	color: var(--secondary);
 	text-shadow: var(--shadow-tertiary);
+}
+@media (min-width: 1200px) {
+	body {
+		padding: 0 var(--padding-main);
+		padding-top: calc(var(--padding-main) / 4);
+	}
+	header,
+	main,
+	footer {
+		width: calc(100% - (var(--padding-main) * 2));
+	}
+	nav {
+		width: 70%;
+	}
+	.icon-open-menu,
+	.icon-close-menu {
+		display: none;
+	}
+	.menu {
+		display: flex;
+		align-items: baseline;
+		position: relative;
+		height: 65px;
+		background: transparent;
+	}
+	.menu-item {
+		display: inline-block;
+		position: relative;
+		height: 100%;
+	}
+	.menu-item a {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		color: var(--secondary);
+		padding: 0 15px;
+		font-size: 1.25em;
+	}
+	.menu-item a:hover {
+		color: var(--secondary);
+	}
+	.menu-item a::after {
+		content: "";
+		width: 0;
+		transition: width 0.25s ease-in-out;
+	}
+	.menu-item a:hover::after {
+		content: "";
+		display: block;
+		height: 3px;
+		width: 64px;
+		margin: 0 auto;
+		background: var(--secondary);
+	}
 }
