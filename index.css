@@ -214,10 +214,12 @@ nav {
 .about {
 	position: relative;
 }
-.about * {
+.about *,
+.motivation * {
 	margin: 0;
 }
-.about-big-title {
+.about-big-title,
+.motivation-big-title {
 	font-family: var(--font-primary);
 	position: absolute;
 	top: -0.5em;
@@ -227,7 +229,8 @@ nav {
 	text-transform: uppercase;
 	letter-spacing: 0.125em;
 }
-.about-title {
+.about-title,
+.motivation-title {
 	font-family: var(--font-primary);
 	text-align: center;
 	padding: 0.5em 2em 1em 2em;
@@ -235,7 +238,8 @@ nav {
 	font-size: 1.5em;
 	text-transform: uppercase;
 }
-.about-text {
+.about-text,
+.motivation-text {
 	padding: 0 2em;
 	padding-bottom: 2em;
 	font-family: var(--font-secondary);
@@ -263,28 +267,39 @@ nav {
 	padding: 0.5em;
 	transform: rotate(-10deg) translate(-45%, -67.5%);
 }
-.countdown-counter {
+.countdown-counter,
+.motivation-counter {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	font-family: var(--font-secondary);
+	color: var(--primary-main);
 }
-.countdown-counter-count {
+.motivation-counter {
+	padding: 0 2em;
+}
+.countdown-counter-count,
+.motivation-counter-count {
 	width: 50%;
 	text-align: center;
 	padding: 1em;
 }
-.countdown-counter-count_quantity {
+.motivation-counter-count {
+	width: 100%;
+}
+.countdown-counter-count_quantity,
+.motivation-counter-count_quantity {
 	font-family: var(--font-primary);
 	font-size: 2.5em;
 }
-.countdown-counter-count_unit {
+.countdown-counter-count_unit,
+.motivation-counter-count_unit {
 	font-family: var(--font-secondary);
 	font-size: 1.25em;
 }
 .event {
-	padding: 2em;
+	padding: 2em 2em 0;
 }
 .event-information {
 	padding-bottom: 2em;
@@ -333,6 +348,17 @@ nav {
 	color: var(--secondary);
 	background: var(--primary-main);
 }
+.motivation {
+	background-image: url('media/motivation-bg.svg');
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 4.5em 0;
+}
+.motivation-big-title {
+	top: 1.5em;
+	font-size: 2.5em;
+}
 @media (min-width: 576px) {
 	.about-big-title {
 		top: -0.25em;
@@ -342,7 +368,8 @@ nav {
 	.about-title {
 		padding: 2em 2em 1em 2em;
 	}
-	.about-text {
+	.about-text,
+	.motivation-text {
 		padding: 0 4em;
 		padding-bottom: 2em;
 	}
@@ -355,6 +382,20 @@ nav {
 	}
 	.event-information {
 		width: 50%;
+	}
+	.motivation-title {
+		padding-top: 2em;
+	}
+	.motivation-big-title {
+		top: 1em;
+		font-size: 4em;
+		letter-spacing: 0.25em;
+	}
+	.motivation-counter {
+		align-items: start;
+	}
+	.motivation-counter-count {
+		width: calc(100% / 3);
 	}
 }
 @media (min-width: 768px) {
@@ -375,7 +416,8 @@ nav {
 	.about-title {
 		padding: 3em 4em 1em 4em;
 	}
-	.about-text {
+	.about-text,
+	.motivation-text {
 		padding: 0 6em;
 		padding-bottom: 2em;
 	}
@@ -398,9 +440,29 @@ nav {
 	.event-information-map {
 		margin: 0 auto 2em auto;
 	}
+	.motivation-big-title {
+		top: 1em;
+		letter-spacing: 0.5em;
+	}
+	.motivation-title {
+		padding-top: 1.5em;
+	}
 }
 @media (min-width: 992px) {
-	
+	.motivation {
+		min-height: 600px;
+		padding: 7.5em 0 4.5em 0;
+	}
+	.motivation-big-title {
+		font-size: 6em;
+		letter-spacing: 0.375em;
+	}
+	.motivation-title {
+		padding-top: 2em;
+	}
+	.motivation-counter {
+		padding: 0 6em;
+	}
 }
 @media (min-width: 1200px) {
 	header {
@@ -471,13 +533,15 @@ nav {
 	.about-big-title {
 		letter-spacing: 0.75em;
 	}
-	.about-title {
+	.about-title,
+	.motivation-title {
 		width: 70%;
 		padding: 2em 4em 1em 4em;
 		margin: 0 auto;
 		font-size: 2em;
 	}
-	.about-text {
+	.about-text,
+	.motivation-text {
 		width: 90%;
 		margin: 0 auto;
 		font-size: 1.25em;
@@ -500,5 +564,16 @@ nav {
 	}
 	.event-information-map {
 		font-size: 1.25em;
+	}
+	.motivation {
+		min-height: 800px;
+		padding: 12em 0 4.5em 0;
+	}
+	.motivation-big-title {
+		top: 1.75em;
+		letter-spacing: 0.5em;	
+	}
+	.motivation-title {
+		padding-top: 1.5em;
 	}
 }
