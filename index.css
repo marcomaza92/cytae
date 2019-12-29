@@ -288,10 +288,13 @@ nav {
 .motivation-counter-count {
 	width: 100%;
 }
-.countdown-counter-count_quantity,
-.motivation-counter-count_quantity {
+.countdown-counter-count_quantity {
 	font-family: var(--font-primary);
 	font-size: 2.5em;
+}
+.motivation-counter-count_quantity {
+	font-family: var(--font-primary);
+	font-size: 4.5em;
 }
 .countdown-counter-count_unit,
 .motivation-counter-count_unit {
