@@ -1,0 +1,25 @@
+stages:
+  - development
+  - production
+pages:
+  stage: development
+  script:
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
+  artifacts:
+    paths:
+    - public
+  only:
+  - develop
+pages:
+  stage: production
+  script:
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
