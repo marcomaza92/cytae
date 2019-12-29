@@ -143,6 +143,15 @@ nav {
 	color: var(--secondary);
 	text-shadow: var(--shadow-tertiary);
 }
+@media (min-width: 576px) {
+
+}
+@media (min-width: 768px) {
+	
+}
+@media (min-width: 992px) {
+	
+}
 @media (min-width: 1200px) {
 	header {
 		padding: 0 var(--padding-main);
