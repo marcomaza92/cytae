@@ -63,6 +63,7 @@ header {
 .img-logo {
 	width: auto;
 	height: 65px;
+	margin-left: 0.5em;
 }
 .img-background {
 	position: absolute;
