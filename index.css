@@ -278,9 +278,11 @@ nav {
 	padding: 1em;
 }
 .countdown-counter-count_quantity {
+	font-family: var(--font-primary);
 	font-size: 2.5em;
 }
 .countdown-counter-count_unit {
+	font-family: var(--font-secondary);
 	font-size: 1.25em;
 }
 .event {
