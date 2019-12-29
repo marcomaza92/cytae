@@ -14,6 +14,7 @@
 	--shadow-primary: 0px 3px 6px var(--primary-main);
 	--shadow-secondary: 0px 3px 6px var(--secondary);
 	--shadow-tertiary: 0px 3px 6px var(--primary-tint-1);
+	--shadow-countdown: 0px 0px 25px var(--primary-main);
 
 	/* Spacing */
 	--padding-main: 7em;
@@ -210,8 +211,151 @@ nav {
 	color: var(--primary-main);
 	background: var(--secondary);
 }
+.about {
+	position: relative;
+}
+.about * {
+	margin: 0;
+}
+.about-big-title {
+	font-family: var(--font-primary);
+	position: absolute;
+	top: -0.5em;
+	left: 0;
+	font-size: 4em;
+	color: rgba(3, 12, 96, 0.10);
+	text-transform: uppercase;
+	letter-spacing: 0.125em;
+}
+.about-title {
+	font-family: var(--font-primary);
+	text-align: center;
+	padding: 0.5em 2em 1em 2em;
+	color: var(--primary-main);
+	font-size: 1.5em;
+	text-transform: uppercase;
+}
+.about-text {
+	padding: 0 2em;
+	padding-bottom: 2em;
+	font-family: var(--font-secondary);
+	color: var(--primary-main);
+	font-size: 1em;
+}
+.countdown {
+	position: relative;
+	background: var(--primary-tint-1);
+	box-shadow: var(--shadow-countdown);
+	width: 80%;
+	margin: 1em auto;
+}
+.countdown-end {
+	position: absolute;
+	width: 80%;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	background: var(--primary-main);
+	font-family: var(--font-secondary);
+	color: var(--secondary);
+	font-size: 2em;
+	padding: 0.5em;
+	transform: rotate(-10deg) translate(-45%, -67.5%);
+}
+.countdown-counter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	font-family: var(--font-secondary);
+}
+.countdown-counter-count {
+	width: 50%;
+	text-align: center;
+	padding: 1em;
+}
+.countdown-counter-count_quantity {
+	font-family: var(--font-primary);
+	font-size: 2.5em;
+}
+.countdown-counter-count_unit {
+	font-family: var(--font-secondary);
+	font-size: 1.25em;
+}
+.event {
+	padding: 2em;
+}
+.event-information {
+	padding-bottom: 2em;
+}
+.event-information-title {
+	color: var(--primary-main);
+	font-size: 1.5em;
+	font-weight: 400;
+	font-family: var(--font-primary);
+	text-transform: uppercase;
+	padding-bottom: 1em;
+}
+.event-information-data {
+	padding-bottom: 2em;
+}
+.event-information-data_title {
+	color: var(--primary-main);
+	font-family: var(--font-secondary);
+	font-weight: 600;
+	font-size: 1.25em;
+	padding-bottom: 0.5em;
+}
+.event-information-data_text {
+	color: var(--primary-main);
+	font-family: var(--font-secondary);
+	font-weight: 400;
+	font-size: 1em;
+}
+.event-information-map {
+	text-align: center;
+	display: block;
+	width: 50%;
+	height: 48px;
+	margin-bottom: 2em;
+	text-decoration: none;
+	font-family: var(--font-secondary);
+	color: var(--primary-main);
+	background: var(--secondary);
+	transition: all 0.25s ease-in-out;
+	font-weight: 400;
+	line-height: 48px;
+	font-size: 1em;
+	border-radius: 50px;
+}
+.event-information-map:hover {
+	color: var(--secondary);
+	background: var(--primary-main);
+}
 @media (min-width: 576px) {
-
+	.about-big-title {
+		top: -0.25em;
+		font-size: 6em;
+		letter-spacing: 0.25em;
+	}
+	.about-title {
+		padding: 2em 2em 1em 2em;
+	}
+	.about-text {
+		padding: 0 4em;
+		padding-bottom: 2em;
+	}
+	.countdown-end {
+		transform: rotate(-10deg) translate(-50%, -100%);
+	}
+	.event {
+		padding: 2em 4em;
+		display: flex;
+	}
+	.event-information {
+		width: 50%;
+	}
 }
 @media (min-width: 768px) {
 	.home {
@@ -223,6 +367,36 @@ nav {
 	}
 	.home-content a {
 		width: 40%;
+	}
+	.about-big-title {
+		top: 0;
+		letter-spacing: 0.5em;
+	}
+	.about-title {
+		padding: 3em 4em 1em 4em;
+	}
+	.about-text {
+		padding: 0 6em;
+		padding-bottom: 2em;
+	}
+	.countdown {
+		margin: 2em auto;
+	}
+	.countdown-end {
+		width: 60%;
+		transform: rotate(-10deg) translate(-50%, -100%);
+	}
+	.countdown-counter-count {
+		width: 25%;
+		text-align: center;
+		padding: 1em;
+	}
+	.event-information {
+		padding: 0 2em;
+		text-align: center;
+	}
+	.event-information-map {
+		margin: 0 auto 2em auto;
 	}
 }
 @media (min-width: 992px) {
@@ -293,5 +467,38 @@ nav {
 	}
 	.home-content a {
 		width: 20%;
+	}
+	.about-big-title {
+		letter-spacing: 0.75em;
+	}
+	.about-title {
+		width: 70%;
+		padding: 2em 4em 1em 4em;
+		margin: 0 auto;
+		font-size: 2em;
+	}
+	.about-text {
+		width: 90%;
+		margin: 0 auto;
+		font-size: 1.25em;
+	}
+	.countdown {
+		width: 70%;
+	}
+	.countdown-end {
+		width: 40%;
+		transform: rotate(-10deg) translate(-50%, -100%);
+	}
+	.event-information-title {
+		font-size: 2em;
+	}
+	.event-information-data_title {
+		font-size: 1.5em;
+	}
+	.event-information-data_text {
+		font-size: 1.25em;
+	}
+	.event-information-map {
+		font-size: 1.25em;
 	}
 }
