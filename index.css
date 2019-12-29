@@ -28,9 +28,7 @@ body {
 	padding: 0;
 	font-size: 16px;
 }
-header,
-main,
-footer {
+header {
 	width: 100%;
 }
 
@@ -146,14 +144,10 @@ nav {
 	text-shadow: var(--shadow-tertiary);
 }
 @media (min-width: 1200px) {
-	body {
+	header {
 		padding: 0 var(--padding-main);
 		padding-top: calc(var(--padding-main) / 4);
-	}
-	header,
-	main,
-	footer {
-		width: calc(100% - (var(--padding-main) * 2));
+		width: 100%;
 	}
 	nav {
 		width: 70%;
