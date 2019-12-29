@@ -1,8 +1,8 @@
 stages:
-  - develop
+  - development
   - production
 pages:
-  stage: develop
+  stage: development
   script:
   - mkdir .public
   - cp -r * .public
