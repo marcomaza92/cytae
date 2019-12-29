@@ -27,6 +27,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
+	height: 3000px;
 }
 header {
 	width: 100%;
@@ -143,11 +144,86 @@ nav {
 	color: var(--secondary);
 	text-shadow: var(--shadow-tertiary);
 }
+/* Home */
+.home,
+.about,
+.motivation,
+.people,
+.join {
+	position: relative;
+	height: 100%;
+	padding: 0;
+}
+.home {
+	background-image: url('media/main-bg-edited-curved.svg'), url('media/main-bg-shape.svg');
+	background-position: left -20px, left top;
+	background-repeat: no-repeat, no-repeat;
+	background-size: cover, cover;
+	color: var(--secondary);
+}
+.home-content {
+	min-height: 800px;
+	height: 100%;
+	padding-top: 65px;
+}
+.home-content * {
+	margin: 0;
+	width: 100%;
+	text-align: center;
+}
+.home-content h1 {
+	margin: 1.25em 0 2.5em 0;
+	font-size: 2em;
+	font-family: var(--font-primary);
+	font-weight: 400;
+	text-shadow: var(--shadow-primary);
+	text-transform: uppercase;
+}
+.home-content h2 {
+	margin-bottom: 1.25em;
+	font-size: 1.5em;
+	font-family: var(--font-secondary);
+	text-shadow: var(--shadow-primary);
+}
+.home-content p {
+	margin-bottom: 0.75em;
+	font-family: var(--font-secondary);
+	text-shadow: var(--shadow-primary);
+}
+.home-content a {
+	display: block;
+	width: 70%;
+	height: 48px;
+	margin: 0 auto;
+	margin-top: 2em;
+	text-decoration: none;
+	font-family: var(--font-secondary);
+	color: var(--secondary);
+	background: var(--primary-main);
+	transition: all 0.25s ease-in-out;
+	font-weight: 400;
+	line-height: 48px;
+	font-size: 1.25em;
+	border-radius: 50px;
+}
+.home-content a:hover {
+	color: var(--primary-main);
+	background: var(--secondary);
+}
 @media (min-width: 576px) {
 
 }
 @media (min-width: 768px) {
-	
+	.home {
+		background-position: left -30px, left top;
+	}
+	.home-content h1 {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+	.home-content a {
+		width: 40%;
+	}
 }
 @media (min-width: 992px) {
 	
@@ -155,7 +231,6 @@ nav {
 @media (min-width: 1200px) {
 	header {
 		padding: 0 calc(var(--padding-main) / 2);
-		/* padding-top: calc(var(--padding-main) / 4); */
 		width: 100%;
 	}
 	nav {
@@ -182,7 +257,7 @@ nav {
 		left: 0;
 		bottom: 0;
 		color: var(--secondary);
-		padding: 0 15px;
+		padding: 0 1em;
 		font-size: 1.25em;
 	}
 	.menu-item a:hover {
@@ -200,5 +275,23 @@ nav {
 		width: 64px;
 		margin: 0 auto;
 		background: var(--secondary);
+	}
+	.home {
+		background-position: left -40px, left top;
+	}
+	.home-content h1 {
+		font-size: 3em;
+		margin: 1.25em 0;
+		padding-left: 4em;
+		padding-right: 4em;
+	}
+	.home-content h2 {
+		font-size: 2em;
+	}
+	.home-content p {
+		font-size: 1.25em;
+	}
+	.home-content a {
+		width: 20%;
 	}
 }
