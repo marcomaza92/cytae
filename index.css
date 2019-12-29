@@ -41,7 +41,6 @@ header {
 	align-items: center;
 	position: fixed;
 	z-index: 10;
-	height: 65px;
 }
 .logo {
 	display: flex;
