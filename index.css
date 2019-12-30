@@ -249,7 +249,7 @@ nav {
 	text-align: center;
 	padding: 0.5em 2em 0.5em 2em;
 	color: var(--primary-main);
-	font-size: 1.2em;
+	font-size: 1.25em;
 	text-transform: uppercase;
 }
 .about-text,
@@ -379,31 +379,32 @@ nav {
 	background-size: cover;
 	padding: 4.5em 0 1em;
 }
-.motivation-big-title, .organization-big-title {
+.motivation-big-title, 
+.organization-big-title {
 	top: 1.5em;
 	font-size: 2.5em;
 }
 .organization-sponsors, 
-.organization-patron{
+.organization-patron {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	margin: 1em 0;
 }
-.organization-logo-200{
+.organization-logo-200 {
 	height: 80px;
 	width: auto;
 	margin: 1em 2em 1em;
 }
-.organization-logo-100{
+.organization-logo-100 {
 	height: 40px;
 	width: auto;
 	margin: 1em 2em 1em;
 }
 .organization-organizers {
 	display: flex;
-	justify-content: center;
+	justify-content: start;
 	flex-direction: column;
 }
 .organization-organizers-profile {
@@ -413,7 +414,7 @@ nav {
 	align-items: center;
 	margin: 2em 5em;
 }
-.organization-organizers-profile-image{
+.organization-organizers-profile-image {
 	margin-bottom: 1em;
 	width: 10em;
 }
@@ -525,22 +526,22 @@ nav {
 		padding-top: 1.5em;
 	}
 	.organization-sponsors, 
-	.organization-patron{
+	.organization-patron {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
-	.organization-logo-200{
+	.organization-logo-200 {
 		height: 80px;
 		width: 50%;
 		margin: 1em 0;
 	}
-	.organization-logo-100{
+	.organization-logo-100 {
 		height: 40px;
 		width: 50%;
-		margin: 0;
+		margin: 1em 0;
 	}
 	.organization-divider {
 		margin: 3em 4em 1em;
@@ -562,7 +563,7 @@ nav {
 		padding: 7.5em 0 1.5em 0;
 	}
 	.motivation-big-title,
-	.organization-big-title  {
+	.organization-big-title {
 		font-size: 6em;
 		letter-spacing: 0.375em;
 	} 
@@ -703,12 +704,12 @@ nav {
 	.organization-title {
 		padding-top: 1.5em;
 	}
-	.organization-logo-200{
+	.organization-logo-200 {
 		height: 120px;
 		width: auto;
 		margin: 1em 2em 2em;
 	}
-	.organization-logo-100{
+	.organization-logo-100 {
 		height: 60px;
 		width: auto;
 		margin: 1em 2em 2em;
