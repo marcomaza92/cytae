@@ -211,15 +211,19 @@ nav {
 	color: var(--primary-main);
 	background: var(--secondary);
 }
-.about {
+.about,
+.motivation,
+.jornada {
 	position: relative;
 }
 .about *,
-.motivation * {
+.motivation *,
+.jornada * {
 	margin: 0;
 }
 .about-big-title,
-.motivation-big-title {
+.motivation-big-title,
+.jornada-big-title {
 	font-family: var(--font-primary);
 	position: absolute;
 	top: -0.5em;
@@ -230,7 +234,8 @@ nav {
 	letter-spacing: 0.125em;
 }
 .about-title,
-.motivation-title {
+.motivation-title,
+.jornada-title {
 	font-family: var(--font-primary);
 	text-align: center;
 	padding: 0.5em 2em 1em 2em;
@@ -239,7 +244,8 @@ nav {
 	text-transform: uppercase;
 }
 .about-text,
-.motivation-text {
+.motivation-text,
+.jornada-text {
 	padding: 0 2em;
 	padding-bottom: 2em;
 	font-family: var(--font-secondary);
@@ -358,9 +364,73 @@ nav {
 	background-size: cover;
 	padding: 4.5em 0;
 }
-.motivation-big-title {
+.motivation-big-title,
+.jornada-big-title {
 	top: 1.5em;
 	font-size: 2.5em;
+}
+.jornada {
+	padding-top: 4.5em;
+}
+.event-gallery {
+	--proportion: calc(1 / 6);
+	--width-big: calc(var(--proportion) * 4);
+	--width-small: calc(var(--proportion) * 2);
+	--height-big: calc(var(--proportion) * 3);
+	--height-small: calc(var(--proportion) * 2);
+}
+.event-gallery-photos {
+	display: flex;
+	padding: 0 0.5em;
+}
+.event-gallery-photos:nth-of-type(2) {
+	display: none;
+}
+.event-gallery-photos-group-big {
+	width: calc(100% * var(--width-big));
+}
+.event-gallery-photos-group-small {
+	width: calc(100% * var(--width-small));
+}
+.event-gallery-photos-group-big_image,
+.event-gallery-photos-group-small_image {
+	display: block;
+	width: 100%;
+	padding: 0.5em;
+}
+.event-gallery-photos-group-big_image {
+	height: calc(100% * var(--height-big));
+}
+.event-gallery-photos-group-small_image {
+	height: calc(100% * var(--height-small));
+}
+.event-gallery-actions {
+	display: flex;
+	padding: 0 0.5em;
+}
+.event-gallery-actions-big,
+.event-gallery-actions-small {
+	padding: 0.5em;
+	height: 6em;
+}
+.event-gallery-actions-big {
+	width: calc(100% * var(--width-big));
+}
+.event-gallery-actions-small {
+	width: calc(100% * var(--width-small));
+}
+.event-gallery-actions-big_link,
+.event-gallery-actions-small_link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--primary-main);
+	color: var(--secondary);
+	font-family: var(--font-secondary);
+	font-size: 1em;
+	font-weight: 600;
+	text-decoration: none;
+	height: 100%;
 }
 @media (min-width: 576px) {
 	.about-big-title {
@@ -372,7 +442,8 @@ nav {
 		padding: 2em 2em 1em 2em;
 	}
 	.about-text,
-	.motivation-text {
+	.motivation-text,
+	.jornada-text {
 		padding: 0 4em;
 		padding-bottom: 2em;
 	}
@@ -386,10 +457,12 @@ nav {
 	.event-information {
 		width: 50%;
 	}
-	.motivation-title {
+	.motivation-title,
+	.jornada-title {
 		padding-top: 2em;
 	}
-	.motivation-big-title {
+	.motivation-big-title,
+	.jornada-big-title {
 		top: 1em;
 		font-size: 4em;
 		letter-spacing: 0.25em;
@@ -420,7 +493,8 @@ nav {
 		padding: 3em 4em 1em 4em;
 	}
 	.about-text,
-	.motivation-text {
+	.motivation-text,
+	.jornada-text {
 		padding: 0 6em;
 		padding-bottom: 2em;
 	}
@@ -443,12 +517,30 @@ nav {
 	.event-information-map {
 		margin: 0 auto 2em auto;
 	}
-	.motivation-big-title {
+	.motivation-big-title,
+	.jornada-big-title {
 		top: 1em;
 		letter-spacing: 0.5em;
 	}
-	.motivation-title {
+	.motivation-title,
+	.jornada-title {
 		padding-top: 1.5em;
+	}
+	.event-gallery {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0 2.5em;
+	}
+	.event-gallery-photos {
+		width: 50%;
+		padding: 0;
+	}
+	.event-gallery-photos:nth-of-type(2) {
+		display: flex;
+	}
+	.event-gallery-actions {
+		width: 50%;
+		padding: 0;
 	}
 }
 @media (min-width: 992px) {
@@ -456,15 +548,20 @@ nav {
 		min-height: 600px;
 		padding: 7.5em 0 4.5em 0;
 	}
-	.motivation-big-title {
+	.motivation-big-title,
+	.jornada-big-title {
 		font-size: 6em;
 		letter-spacing: 0.375em;
 	}
-	.motivation-title {
+	.motivation-title,
+	.jornada-title {
 		padding-top: 2em;
 	}
 	.motivation-counter {
 		padding: 0 6em;
+	}
+	.jornada {
+		padding: 7.5em 0 4.5em 0;
 	}
 }
 @media (min-width: 1200px) {
@@ -537,14 +634,16 @@ nav {
 		letter-spacing: 0.75em;
 	}
 	.about-title,
-	.motivation-title {
+	.motivation-title,
+	.jornada-title {
 		width: 70%;
 		padding: 2em 4em 1em 4em;
 		margin: 0 auto;
 		font-size: 2em;
 	}
 	.about-text,
-	.motivation-text {
+	.motivation-text,
+	.jornada-text {
 		width: 90%;
 		margin: 0 auto;
 		font-size: 1.25em;
@@ -572,11 +671,23 @@ nav {
 		min-height: 800px;
 		padding: 12em 0 4.5em 0;
 	}
-	.motivation-big-title {
+	.motivation-big-title,
+	.jornada-big-title {
 		top: 1.75em;
 		letter-spacing: 0.5em;	
 	}
-	.motivation-title {
+	.motivation-title,
+	.jornada-title {
 		padding-top: 1.5em;
+	}
+	.jornada {
+		padding: 12em 0 4.5em 0;
+	}
+	.event-gallery {
+		padding: 0 5em;
+	}
+	.event-gallery-actions-big_link,
+	.event-gallery-actions-small_link {
+		font-size: 1.25em;
 	}
 }
