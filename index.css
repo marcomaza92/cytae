@@ -149,6 +149,7 @@ nav {
 .home,
 .about,
 .motivation,
+.organization,
 .people,
 .join {
 	position: relative;
@@ -215,11 +216,13 @@ nav {
 	position: relative;
 }
 .about *,
-.motivation * {
+.motivation *,
+.organization * {
 	margin: 0;
 }
 .about-big-title,
-.motivation-big-title {
+.motivation-big-title, 
+.organization-big-title {
 	font-family: var(--font-primary);
 	position: absolute;
 	top: -0.5em;
@@ -230,12 +233,23 @@ nav {
 	letter-spacing: 0.125em;
 }
 .about-title,
-.motivation-title {
+.motivation-title,
+.organization-title {
 	font-family: var(--font-primary);
 	text-align: center;
 	padding: 0.5em 2em 1em 2em;
 	color: var(--primary-main);
 	font-size: 1.5em;
+	text-transform: uppercase;
+}
+
+.organization-subtitle, 
+.organization-footer {
+	font-family: var(--font-primary);
+	text-align: center;
+	padding: 0.5em 2em 0.5em 2em;
+	color: var(--primary-main);
+	font-size: 1.2em;
 	text-transform: uppercase;
 }
 .about-text,
@@ -358,10 +372,65 @@ nav {
 	background-size: cover;
 	padding: 4.5em 0;
 }
-.motivation-big-title {
+.organization {
+	background-image: url('media/organization-bg.svg');
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 4.5em 0 1em;
+}
+.motivation-big-title, .organization-big-title {
 	top: 1.5em;
 	font-size: 2.5em;
 }
+.organization-sponsors, 
+.organization-patron{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 1em 0;
+}
+.organization-logo-200{
+	height: 80px;
+	width: auto;
+	margin: 1em 2em 1em;
+}
+.organization-logo-100{
+	height: 40px;
+	width: auto;
+	margin: 1em 2em 1em;
+}
+.organization-organizers {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.organization-organizers-profile {
+	display: flex; 
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 2em 5em;
+}
+.organization-organizers-profile-image{
+	margin-bottom: 1em;
+	width: 10em;
+}
+.organization-organizers-profile-name,
+.organization-organizers-profile-college,
+.organization-organizers-profile-mail {
+	padding: 0 2em;
+	font-family: var(--font-secondary);
+	text-align: center;
+	color: var(--primary-main);
+	font-size: 1em;
+}
+.organization-divider {
+	margin: 3em 3em 1em;
+	border: 0.5px solid var(--primary-main);
+}
+
 @media (min-width: 576px) {
 	.about-big-title {
 		top: -0.25em;
@@ -386,10 +455,12 @@ nav {
 	.event-information {
 		width: 50%;
 	}
-	.motivation-title {
+	.motivation-title, 
+	.organization-title {
 		padding-top: 2em;
 	}
-	.motivation-big-title {
+	.motivation-big-title, 
+	.organization-big-title {
 		top: 1em;
 		font-size: 4em;
 		letter-spacing: 0.25em;
@@ -400,6 +471,7 @@ nav {
 	.motivation-counter-count {
 		width: calc(100% / 3);
 	}
+	
 }
 @media (min-width: 768px) {
 	.home {
@@ -443,12 +515,41 @@ nav {
 	.event-information-map {
 		margin: 0 auto 2em auto;
 	}
-	.motivation-big-title {
+	.motivation-big-title, 
+	.organization-big-title {
 		top: 1em;
 		letter-spacing: 0.5em;
 	}
-	.motivation-title {
+	.motivation-title, 
+	.organization-title {
 		padding-top: 1.5em;
+	}
+	.organization-sponsors, 
+	.organization-patron{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.organization-logo-200{
+		height: 80px;
+		width: 50%;
+		margin: 1em 0;
+	}
+	.organization-logo-100{
+		height: 40px;
+		width: 50%;
+		margin: 0;
+	}
+	.organization-divider {
+		margin: 3em 4em 1em;
+		border: 0.5px solid var(--primary-main);
+	}
+	.organization-organizers {
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
 	}
 }
 @media (min-width: 992px) {
@@ -456,15 +557,31 @@ nav {
 		min-height: 600px;
 		padding: 7.5em 0 4.5em 0;
 	}
-	.motivation-big-title {
+	.organization {
+		min-height: 600px;
+		padding: 7.5em 0 1.5em 0;
+	}
+	.motivation-big-title,
+	.organization-big-title  {
 		font-size: 6em;
 		letter-spacing: 0.375em;
-	}
-	.motivation-title {
+	} 
+	.motivation-title,
+	.organization-title {
 		padding-top: 2em;
 	}
 	.motivation-counter {
 		padding: 0 6em;
+	}
+	.organization-subtitle, 
+	.organization-footer {
+		font-family: var(--font-primary);
+		text-align: center;
+		padding: 0.5em 2em 1em 2em;
+		margin: 0 6em;
+		color: var(--primary-main);
+		font-size: 1.2em;
+		text-transform: uppercase;
 	}
 }
 @media (min-width: 1200px) {
@@ -537,7 +654,8 @@ nav {
 		letter-spacing: 0.75em;
 	}
 	.about-title,
-	.motivation-title {
+	.motivation-title,
+	.organization-title {
 		width: 70%;
 		padding: 2em 4em 1em 4em;
 		margin: 0 auto;
@@ -572,11 +690,27 @@ nav {
 		min-height: 800px;
 		padding: 12em 0 4.5em 0;
 	}
-	.motivation-big-title {
+	.organization {
+		min-height: 800px;
+		padding: 12em 0 1.5em 0;
+	}
+	.motivation-big-title,
+	.organization-big-title {
 		top: 1.75em;
 		letter-spacing: 0.5em;	
 	}
-	.motivation-title {
+	.motivation-title,
+	.organization-title {
 		padding-top: 1.5em;
+	}
+	.organization-logo-200{
+		height: 120px;
+		width: auto;
+		margin: 1em 2em 2em;
+	}
+	.organization-logo-100{
+		height: 60px;
+		width: auto;
+		margin: 1em 2em 2em;
 	}
 }
