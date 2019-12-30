@@ -379,7 +379,7 @@ nav {
 	padding: 4.5em 0;
 }
 .jornada {
-	padding-top: 4.5em;
+	padding: 2em 0 4.5em 0;
 }
 .event-gallery {
 	--proportion: calc(1 / 6);
@@ -449,9 +449,12 @@ nav {
 	padding: 4.5em 0 1em;
 }
 .motivation-big-title,
-.jornada-big-title,
 .organization-big-title {
 	top: 1.5em;
+	font-size: 2.5em;
+}
+.jornada-big-title{
+	top: 0.5em;
 	font-size: 2.5em;
 }
 .organization-sponsors, 
@@ -564,6 +567,9 @@ nav {
 	.about-title {
 		padding: 3em 4em 1em 4em;
 	}
+	.jornada {
+		padding: 4.5em 0 4.5em 0;
+	}
 	.about-text,
 	.motivation-text,
 	.jornada-text {
@@ -654,11 +660,14 @@ nav {
 		padding: 7.5em 0 1.5em 0;
 	}
 	.motivation-big-title,
-	.jornada-big-title,
 	.organization-big-title {
 		font-size: 6em;
 		letter-spacing: 0.375em;
 	} 
+	.jornada-big-title {
+		top: 0.5em;
+		letter-spacing: 0.375em;
+	}	
 	.motivation-title,
 	.jornada-title,
 	.organization-title {
@@ -678,7 +687,7 @@ nav {
 		text-transform: uppercase;
 	}
 	.jornada {
-		padding: 7.5em 0 4.5em 0;
+		padding: 1.5em 0 4.5em 0;		
 	}
 }
 @media (min-width: 1200px) {
@@ -794,9 +803,12 @@ nav {
 		padding: 12em 0 1.5em 0;
 	}
 	.motivation-big-title,
-	.organization-big-title,
-	.jornada-big-title {
+	.organization-big-title {
 		top: 1.75em;
+		letter-spacing: 0.5em;	
+	}
+	.jornada-big-title {
+		top: 0.5em;
 		letter-spacing: 0.5em;	
 	}
 	.motivation-title,
@@ -815,7 +827,7 @@ nav {
 		margin: 1em 2em 2em;
 	}
 	.jornada {
-		padding: 12em 0 4.5em 0;
+		padding: 1.5em 0 4.5em 0;
 	}
 	.event-gallery {
 		padding: 0 5em;
