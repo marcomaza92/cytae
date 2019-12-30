@@ -404,13 +404,13 @@ nav {
 }
 .organization-organizers {
 	display: flex;
-	justify-content: start;
+	justify-content: center;
 	flex-direction: column;
 }
 .organization-organizers-profile {
 	display: flex; 
 	flex-direction: column;
-	justify-content: center;
+	justify-content: start;
 	align-items: center;
 	margin: 2em 5em;
 }
