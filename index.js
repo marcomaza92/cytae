@@ -8,16 +8,6 @@ closeMenu.addEventListener("click", function() {
 	var menu = document.querySelector('.menu');
 	menu.classList.remove('open');
 });
-var openObjetives = document.querySelector('.open-about-objetives');
-openObjetives.addEventListener("click", function() {
-	var objetives = document.querySelector('.about-objetives');
-	objetives.classList.add('open');
-});
-var closeObjetives = document.querySelector('.close-about-objetives');
-closeObjetives.addEventListener("click", function() {
-	var objetives = document.querySelector('.about-objetives');
-	objetives.classList.remove('open');
-});
 function scrollIt(destination, duration = 200, easing = 'linear', callback) {
 
   const easings = {
@@ -62,30 +52,26 @@ function scrollIt(destination, duration = 200, easing = 'linear', callback) {
 }
 
 document.querySelector('.home-button').addEventListener('click', () => {
-  scrollIt(document.querySelector('.home'), 300, 'easeInOut');
+  scrollIt(document.querySelector('.home'), 1500, 'easeInOut');
 	document.querySelector('.menu').classList.remove('open');
 });
 document.querySelector('.about-button').addEventListener('click', () => {
-  scrollIt(document.querySelector('.about'), 300, 'easeInOut');
+  scrollIt(document.querySelector('.about'), 1500, 'easeInOut');
 	document.querySelector('.menu').classList.remove('open');
 });
 document.querySelector('.motivation-button').addEventListener('click', () => {
-  scrollIt(document.querySelector('.motivation'), 300, 'easeInOut');
+  scrollIt(document.querySelector('.motivation'), 1500, 'easeInOut');
 	document.querySelector('.menu').classList.remove('open');
 });
-document.querySelector('.people-button').addEventListener('click', () => {
-  scrollIt(document.querySelector('.people'), 300, 'easeInOut');
+document.querySelector('.jornada-button').addEventListener('click', () => {
+  scrollIt(document.querySelector('.jornada'), 1500, 'easeInOut');
 	document.querySelector('.menu').classList.remove('open');
 });
-document.querySelector('.join-button').addEventListener('click', () => {
-  scrollIt(document.querySelector('.join'), 300, 'easeInOut');
-	document.querySelector('.menu').classList.remove('open');
-});
-document.querySelector('.join-button-2').addEventListener('click', () => {
-  scrollIt(document.querySelector('.join'), 300, 'easeInOut');
+document.querySelector('.organization-button').addEventListener('click', () => {
+  scrollIt(document.querySelector('.organization'), 1500, 'easeInOut');
 	document.querySelector('.menu').classList.remove('open');
 });
 document.querySelector('.go-top').addEventListener('click', () => {
-  scrollIt(document.querySelector('.home'), 300, 'easeInOut');
+  scrollIt(document.querySelector('.home'), 1500, 'easeInOut');
 	document.querySelector('.menu').classList.remove('open');
 });
