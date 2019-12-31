@@ -535,6 +535,7 @@ nav {
 		padding-top: 2em;
 	}
 	.motivation-big-title,
+	.jornada-big-title, 
 	.organization-big-title {
 		top: 1em;
 		font-size: 4em;
@@ -659,6 +660,7 @@ nav {
 		padding: 7.5em 0 1.5em 0;
 	}
 	.motivation-big-title,
+	.jornada-big-title,
 	.organization-big-title {
 		font-size: 6em;
 		letter-spacing: 0.375em;
@@ -686,7 +688,7 @@ nav {
 		text-transform: uppercase;
 	}
 	.jornada {
-		padding: 1.5em 0 4.5em 0;		
+		padding: 4.5em 0;		
 	}
 }
 @media (min-width: 1200px) {
