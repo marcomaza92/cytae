@@ -548,7 +548,7 @@ nav {
 		width: calc(100% / 3);
 	}
 	.jornada {
-		padding: 3.5em 0 4.5em 0;
+		padding-top: 3.5em;
 	}
 	
 }
