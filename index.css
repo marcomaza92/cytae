@@ -406,6 +406,7 @@ nav {
 	display: block;
 	width: 100%;
 	padding: 0.5em;
+	object-fit: cover;
 }
 .event-gallery-photos-group-big_image {
 	height: calc(100% * var(--height-big));
