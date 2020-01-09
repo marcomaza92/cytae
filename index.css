@@ -156,6 +156,12 @@ nav {
 	height: 100%;
 	padding: 0;
 }
+.about,
+.motivation,
+.jornada,
+.organization{
+	padding-top: 7.75em;
+}
 .home {
 	background-image: url('media/main-bg-edited-curved.svg'), url('media/main-bg-shape.svg');
 	background-position: left -20px, left top;
@@ -229,12 +235,20 @@ nav {
 .organization-big-title {
 	font-family: var(--font-primary);
 	position: absolute;
-	top: -0.5em;
+	top: 0;
 	left: 0;
 	font-size: 4em;
 	color: rgba(3, 12, 96, 0.10);
 	text-transform: uppercase;
 	letter-spacing: 0.125em;
+}
+.about-big-title {
+	margin-top: 1.5em;
+}
+.motivation-big-title,  
+.jornada-big-title,
+.organization-big-title {
+	margin-top: 2.75em;
 }
 .about-title,
 .motivation-title,
@@ -261,10 +275,13 @@ nav {
 .motivation-text,
 .jornada-text {
 	padding: 0 2em;
-	padding-bottom: 2em;
 	font-family: var(--font-secondary);
 	color: var(--primary-main);
 	font-size: 1em;
+}
+.about-text,
+.jornada-text {
+	padding-bottom: 2em;
 }
 .countdown {
 	position: relative;
@@ -376,17 +393,19 @@ nav {
 	background-position: left top;
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 4.5em 0;
+	min-height: 850px;
+	/* padding: 4.5em 0; */
 }
-.jornada {
+/* .jornada {
 	padding: 2em 0 4.5em 0;
-}
+} */
 .event-gallery {
 	--proportion: calc(1 / 6);
 	--width-big: calc(var(--proportion) * 4);
 	--width-small: calc(var(--proportion) * 2);
 	--height-big: calc(var(--proportion) * 3);
 	--height-small: calc(var(--proportion) * 2);
+	margin-bottom: 3em;
 }
 .event-gallery-photos {
 	display: flex;
@@ -447,15 +466,15 @@ nav {
 	background-position: left top;
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 4.5em 0 1em;
+	padding-bottom: 1em;
 }
 .motivation-big-title,
 .organization-big-title {
-	top: 1.5em;
+	/* top: 1.5em; */
 	font-size: 2.5em;
 }
 .jornada-big-title{
-	top: 0.5em;
+	/* top: 0.5em; */
 	font-size: 2.5em;
 }
 .organization-sponsors, 
@@ -505,9 +524,16 @@ nav {
 	margin: 3em 3em 1em;
 	border: 0.5px solid var(--primary-main);
 }
+.about-big-title, .motivation-big-title, .jornada-big-title, .organization-big-title {
+	top: 0;
+}
 @media (min-width: 576px) {
+	.about {
+		padding-top: 7.75em;
+	}
 	.about-big-title {
-		top: -0.25em;
+		/* top: -0.25em; */
+		margin-top: 1em;
 		font-size: 6em;
 		letter-spacing: 0.25em;
 	}
@@ -530,6 +556,12 @@ nav {
 	.event-information {
 		width: 50%;
 	}
+	.motivation, .organization {
+		padding-top: 5.5em;
+	}
+	.motivation {
+		min-height: 550px;
+	}
 	.motivation-title, 
 	.jornada-title,
 	.organization-title {
@@ -538,9 +570,15 @@ nav {
 	.motivation-big-title,
 	.jornada-big-title, 
 	.organization-big-title {
-		top: 1em;
 		font-size: 4em;
 		letter-spacing: 0.25em;
+	}
+	.motivation-big-title,
+	.organization-big-title {
+		margin-top: 1.5em;
+	}
+	.jornada-big-title {
+		margin-top: 1.5em;
 	}
 	.motivation-counter {
 		align-items: start;
@@ -549,7 +587,7 @@ nav {
 		width: calc(100% / 3);
 	}
 	.jornada {
-		padding-top: 3.5em;
+		padding-top: 5.75em;
 	}
 	
 }
@@ -564,15 +602,19 @@ nav {
 	.home-content a {
 		width: 40%;
 	}
+	.about {
+		padding-top: 6.5em;
+	}
 	.about-big-title {
-		top: 0;
 		letter-spacing: 0.5em;
 	}
 	.about-title {
 		padding: 3em 4em 1em 4em;
 	}
-	.jornada {
-		padding: 4.5em 0;
+	.motivation,
+	.jornada,
+	.organization {
+		padding-top: 7.25em;
 	}
 	.about-text,
 	.motivation-text,
@@ -602,13 +644,14 @@ nav {
 	.motivation-big-title,
 	.jornada-big-title,
 	.organization-big-title {
-		top: 1em;
+		top: 0;
+		margin-top: 1.25em;
 		letter-spacing: 0.5em;
 	}
 	.motivation-title,
 	.jornada-title, 
 	.organization-title {
-		padding-top: 1.5em;
+		padding-top: 1.75em;
 	}
 	.organization-sponsors, 
 	.organization-patron {
@@ -655,13 +698,26 @@ nav {
 	}
 }
 @media (min-width: 992px) {
+	.about {
+		padding-top: 5.75em;
+	}
 	.motivation {
 		min-height: 600px;
-		padding: 7.5em 0 4.5em 0;
+		padding-bottom: 4.5em;
 	}
 	.organization {
-		min-height: 600px;
-		padding: 7.5em 0 1.5em 0;
+		padding-bottom: 1.5em;
+	}
+	.motivation,
+	.jornada,
+	.organization {
+		padding-top: 7.75em;
+	}
+	.about-big-title,
+	.motivation-big-title,
+	.jornada-big-title,
+	.organization-big-title {
+		margin-top: 1em;
 	}
 	.motivation-big-title,
 	.jornada-big-title,
@@ -670,7 +726,6 @@ nav {
 		letter-spacing: 0.375em;
 	} 
 	.jornada-big-title {
-		top: 0.5em;
 		letter-spacing: 0.375em;
 	}	
 	.motivation-title,
@@ -692,7 +747,7 @@ nav {
 		text-transform: uppercase;
 	}
 	.jornada {
-		padding: 4.5em 0;		
+		padding-bottom: 1em;		
 	}
 }
 @media (min-width: 1200px) {
@@ -801,15 +856,20 @@ nav {
 	}
 	.motivation {
 		min-height: 800px;
-		padding: 12em 0 4.5em 0;
+		padding: 7.5em 0 4.5em 0;
+	}
+	.motivation-counter-count_quantity {
+		font-size: 6.5em;
+	}
+	.motivation-counter-count_unit {
+		font-size: 1.75em;
 	}
 	.organization {
 		min-height: 800px;
-		padding: 12em 0 1.5em 0;
+		padding: 7.5em 0 1.5em 0;
 	}
 	.motivation-big-title,
 	.organization-big-title {
-		top: 1.75em;
 		letter-spacing: 0.5em;	
 	}
 	.jornada-big-title {
@@ -836,5 +896,22 @@ nav {
 	.event-gallery-actions-big_link,
 	.event-gallery-actions-small_link {
 		font-size: 1.25em;
+	}
+}
+
+@media (min-width: 1600px) {
+	.home {
+		min-height: 1100px;
+	}
+	.home-content{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.about {
+		padding-top: 6.25em;
+	}
+	.motivation {
+		min-height: 1060px;
 	}
 }
