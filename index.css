@@ -156,11 +156,17 @@ nav {
 	height: 100%;
 	padding: 0;
 }
-.about,
-.motivation,
-.jornada,
-.organization{
+.about{
 	padding-top: 7.75em;
+}
+.organization {
+	padding-top: 6.75em
+}
+.motivation {
+	padding-top: 6.75em;
+}
+.jornada {
+	padding-top: 6.75em;
 }
 .home {
 	background-image: url('media/main-bg-edited-curved.svg'), url('media/main-bg-shape.svg');
@@ -471,11 +477,11 @@ nav {
 .motivation-big-title,
 .organization-big-title {
 	/* top: 1.5em; */
-	font-size: 2.5em;
+	font-size: 2.25em;
 }
 .jornada-big-title{
 	/* top: 0.5em; */
-	font-size: 2.5em;
+	font-size: 2.25em;
 }
 .organization-sponsors, 
 .organization-patron {
@@ -614,7 +620,7 @@ nav {
 	.motivation,
 	.jornada,
 	.organization {
-		padding-top: 7.25em;
+		padding-top: 5.25em;
 	}
 	.about-text,
 	.motivation-text,
